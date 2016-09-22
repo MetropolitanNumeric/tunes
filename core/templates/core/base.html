@@ -28,37 +28,10 @@ TUNES
         </nav>
     </header>
     <div class="container">
-<!--
-    <div class="container">
-        {% if messages %}
-            {% for message in messages %}
-                <div class="alert alert-success">
-                    {{ message }}
-                </div>
-            {% endfor %}
-        {% endif %}
-        {% if breadcrumbs %}
-            <ol class="breadcrumb">
-                <li><a href="{% url 'core:index' %}">Home</a></li>
-                {% for breadcrumb in breadcrumbs %}
-                    <li>
-                        {% if breadcrumb.1 %}
-                            <a href="{{breadcrumb.1}}">
-                        {% endif %}
-                        {{ breadcrumb.0 }}
-                        {% if breadcrumb.1 %}
-                            </a>
-                        {% endif %}
-                    </li>
-                {% endfor %}
-            </ol>
-        {% endif %}
-        {% block content %}
+    {%  block content %}
 
-        {% endblock %}
+    {%  endblock content %}
     </div>
--->
-</div>
     <footer class="page-footer">
         <hr>
         <div class="container">

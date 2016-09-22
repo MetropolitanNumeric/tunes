@@ -1,0 +1,17 @@
+body {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.page-footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    padding-bottom: 5px;
+    background-color: green;
+}
+
+.good {
+    margin: 0 auto;
+    padding-top: 20px;
+}

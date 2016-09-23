@@ -18,9 +18,8 @@ from django.contrib import admin
 urlpatterns = [
 # admin/
     url(r'^admin/', include(admin.site.urls)),
-# album
+
     url(r'^album/', include('tunes_app.urls', namespace='album')),
-# genre
-# index
+
     url(r'^', include('core.urls', namespace='core')),
 ]

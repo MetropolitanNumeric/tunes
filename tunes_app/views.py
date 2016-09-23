@@ -5,13 +5,27 @@ from django.db.models import Count
 from .models import Album, Track, Artist, Genre
 
 def album_list(request):
-    albums = Album.objects.annotate(album_count=Count('artist')).all()
-# WHY DO WE HAVE TO USE 'ARTIST' WHEN def bookcase_list DOESN'T???????????
+    albums = Album.objects.all()
 
     context = {
         "albums": albums,
     }
     return render(request, "tunes_app/album_list.html", context)
 
-def album_detail(request, id):
-    album = get_object_or_404(Album, pk=id)
+def track_list(request, id):
+    tracks = Track.objects.all()
+
+    context = {
+        "tracks": tracks,
+    }
+    return render(request, "tunes_app/album_tracks.html", context)
+
+#def album_detail(request, id):
+#    album = get_object_or_404(Album, pk=id)
+
+#    all_tracks = album.track_set.all()
+
+#    context = {
+#        "album": album,
+#    }
+#    return render(request, "tunes_app/album_tracks.html", context)

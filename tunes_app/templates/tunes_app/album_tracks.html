@@ -1,12 +1,12 @@
 {% extends "core/base.html" %}
 
 {% block content %}
-<h2>Awesome Albums</h2>
+<h2>{{tracks.name|title}}</h2>
 <hr>
 
-    {% for album in albums %}
+    {% for track in tracks %}
 
-        {{album.name}}<br>
+        {{track.name}}<br>
 
     {% endfor %}
 

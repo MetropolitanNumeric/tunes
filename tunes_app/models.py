@@ -5,13 +5,13 @@ class Album(models.Model):
     name = models.CharField(max_length=50)
     artist = models.ForeignKey('Artist')
     genre = models.ForeignKey('Genre')
+#    tracks = models.ForeignKey('Track')
 
     def __str__(self):
         return self.name
 
     def get_absolute_url(self):
-        #return reverse('namespace:name', args=[self.pk])
-        pass
+        return reverse('tunes_app:album_detail', args=[self.pk])
 
 class Track(models.Model):
     name = models.CharField(max_length=50)

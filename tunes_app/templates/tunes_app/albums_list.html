@@ -3,11 +3,12 @@
 {% block content %}
 <h2>Awesome Albums</h2>
 <hr>
-
+<!-- albums is in context w/in def albums_list-->
     {% for album in albums %}
 
-        {{album.name}}<br>
-
+    <a href="{% url 'tunes_app:tracks_in_album' specific_album.pk %}">
+        {{album.name}}
+    </a>
     {% endfor %}
 
 <hr>

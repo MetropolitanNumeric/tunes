@@ -3,12 +3,14 @@
 {% block content %}
 <h2>{{tracks.name|title}}</h2>
 <hr>
-<!-->context tracks w/in def tracks_in_album </!-->
-    {% for track in album_tracks %}
+{% if tracks %}
+    {% for track in tracks %}
 
         {{track.name}}<br>
 
     {% endfor %}
-
+{% else %}
+There are no tracks in this album.
+{% endif %}
 <hr>
 {% endblock content %}

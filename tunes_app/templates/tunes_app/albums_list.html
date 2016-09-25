@@ -6,8 +6,8 @@
 <!-- albums is in context w/in def albums_list-->
     {% for album in albums %}
 
-    <a href="{% url 'tunes_app:tracks_in_album' specific_album.pk %}">
-        {{album.name}}
+    <a href="{% url 'tunes_app:tracks_in_album' album.pk %}">
+        {{album.name}}<br>
     </a>
     {% endfor %}
 

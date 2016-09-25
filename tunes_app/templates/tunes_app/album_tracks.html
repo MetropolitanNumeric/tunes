@@ -1,10 +1,10 @@
 {% extends "core/base.html" %}
 
 {% block content %}
-<h2>{{tracks.name|title}}</h2>
+<h2>{{specific_album.name|title}}</h2>
 <hr>
-{% if tracks %}
-    {% for track in tracks %}
+{% if album_tracks %}
+    {% for track in album_tracks %}
 
         {{track.name}}<br>
 

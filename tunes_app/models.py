@@ -5,7 +5,6 @@ class Album(models.Model):
     name = models.CharField(max_length=50)
     artist = models.ForeignKey('Artist')
     genre = models.ForeignKey('Genre')
-#    tracks = models.ForeignKey('Track')
 
     def __str__(self):
         return self.name
@@ -15,7 +14,7 @@ class Album(models.Model):
 
 class Track(models.Model):
     name = models.CharField(max_length=50)
-    albums = models.ForeignKey('Album')
+    album = models.ForeignKey('Album')
 
     def __str__(self):
         return self.name

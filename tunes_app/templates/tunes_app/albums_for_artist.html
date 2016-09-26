@@ -1,0 +1,13 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+    {% if specific_artist %}
+        <h2>{{specific_artist}}</h2>
+        {% for album in artist_albums %}
+
+        {{album.name}}
+
+        {% endfor %}
+    {% endif %}
+
+{% endblock %}

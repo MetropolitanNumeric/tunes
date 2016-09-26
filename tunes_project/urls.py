@@ -16,7 +16,6 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
-# admin/
     url(r'^admin/', include(admin.site.urls)),
     url(r'^album/', include('tunes_app.urls', namespace='album')),
     url(r'^artist/', include('tunes_app.urls', namespace='artist')),

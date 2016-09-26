@@ -19,7 +19,8 @@ urlpatterns = [
 # admin/
     url(r'^admin/', include(admin.site.urls)),
 
-    url(r'^album/', include('tunes_app.urls', namespace='tunes_app')),
-
+    url(r'^album/', include('tunes_app.urls', namespace='album')),
+    url(r'^artist/', include('tunes_app.urls', namespace='artist')),
+    url(r'^genre/', include('tunes_app.urls', namespace='genre')),
     url(r'^', include('core.urls', namespace='core')),
 ]

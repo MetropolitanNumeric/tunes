@@ -14,12 +14,10 @@ def albums_list(request):
 
 def tracks_in_album(request, id):
     specific_album = get_object_or_404(Album, pk=id)
-#    specific_track = get_object_or_404(Track, pk=id)
-    album_tracks = Track.albums(pk=id)
+    album_tracks = specific_album.track_set.all()
 
     context = {
         "specific_album": specific_album,
-        "specific_track": specific_track,
         "album_tracks": album_tracks,
     }
     return render(request, "tunes_app/album_tracks.html", context)

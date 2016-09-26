@@ -3,6 +3,9 @@
 
 
 {% block content %}
-    <h2>INDEX IT!</h2>
+    <h2>Libraries Nav-Bar</h2>
     <hr>
+    <a href="{% url 'album:albums_list' %}">Albums Library</a>
+    <a href="{% url 'artist:artist_list' %}">Artists</a>
+    <a href="{% url 'genre:genre_list' %}">Genres</a>
 {% endblock %}

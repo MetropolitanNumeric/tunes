@@ -9,6 +9,10 @@ class Album(models.Model):
     def __str__(self):
         return self.name
 
+    def get_artist_names(self):
+        artist_names = [artist.name for artist in self.artist.all()]
+        return " ".join(artist_names)
+
     def get_absolute_url(self):
         return reverse('tunes_app:album_detail', args=[self.pk])
 

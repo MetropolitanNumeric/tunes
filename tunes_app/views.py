@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.core.urlresolvers import reverse
 from django.db.models import Count
+from django.http import HttpResponse
 
 from .models import Album, Track, Artist, Genre
 
@@ -21,3 +22,19 @@ def tracks_in_album(request, id):
         "album_tracks": album_tracks,
     }
     return render(request, "tunes_app/album_tracks.html", context)
+
+def artist_list(request):
+    artists = Artist.objects.all()
+
+    context = {
+        "artists": artists,
+    }
+    return render(request, "tunes_app/artists_list.html", context)
+
+def genre_list(request):
+    genres = Genre.objects.all()
+
+    context = {
+        "genres": genres,
+    }
+    return render(request, "tunes_app/genres_list.html", context)

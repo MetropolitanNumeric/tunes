@@ -1,0 +1,14 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+<h2>Genres</h2>
+<hr>
+<!-- albums is in context w/in def albums_list-->
+    {% for genre in genres %}
+
+        {{genre.name}}<br>
+    </a>
+    {% endfor %}
+
+<hr>
+{% endblock content %}

@@ -13,7 +13,7 @@ def album_list(request):
     }
     return render(request, "tunes_app/album_list.html", context)
 
-def albums_for_artist(request, id):
+def artist_detail(request, id):
     specific_artist = get_object_or_404(Artist, pk=id)
     artist_albums = specific_artist.album_set.all()
 
@@ -21,7 +21,7 @@ def albums_for_artist(request, id):
         "specific_artist": specific_artist,
         "artist_albums": artist_albums,
     }
-    return render(request, "tunes_app/album_for_artist.html", context)
+    return render(request, "tunes_app/artist_detail.html", context)
 
 def album_detail(request, id):
     specific_album = get_object_or_404(Album, pk=id)

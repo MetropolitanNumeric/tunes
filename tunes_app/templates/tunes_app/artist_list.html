@@ -5,7 +5,7 @@
 <hr>
     {% for artist in artists %}
 
-    <a href="{% url 'music:albums_for_artist' artist.pk %}">
+    <a href="{% url 'music:artist_detail' artist.pk %}">
         {{artist.name}}<br>
     </a>
     {% endfor %}

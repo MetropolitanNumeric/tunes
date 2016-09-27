@@ -2,8 +2,8 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    url(r'^a/$', views.albums_list, name='albums_list'),
-    url(r'^b/$', views.artist_list, name='artist_list'),
-    url(r'^c/$', views.genre_list, name='genre_list'),
-    url(r'^(?P<id>\d+)/$', views.tracks_in_album, name='tracks_in_album'),
+    url(r'^albums/$', views.album_list, name='album_list'),
+    url(r'^artists/$', views.artist_list, name='artist_list'),
+    url(r'^genres/$', views.genre_list, name='genre_list'),
+    url(r'^albums/(?P<id>\d+)/$', views.album_detail, name='album_detail'),
 ]

@@ -8,7 +8,7 @@
     <h2>Album Library</h2>
 
     {% for album in albums %}
-    <a href="{% url 'album:tracks_in_album' album.pk %}">
+    <a href="{% url 'music:album_detail' album.pk %}">
         {{album.name}}<br>
     </a>
     {% endfor %}

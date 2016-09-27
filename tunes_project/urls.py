@@ -17,8 +17,9 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^album/', include('tunes_app.urls', namespace='album')),
-    url(r'^artist/', include('tunes_app.urls', namespace='artist')),
-    url(r'^genre/', include('tunes_app.urls', namespace='genre')),
+#    url(r'^album/', include('tunes_app.urls', namespace='album')),
+#    url(r'^artist/', include('tunes_app.urls', namespace='artist')),
+#    url(r'^genre/', include('tunes_app.urls', namespace='genre')),
+    url(r'^music/', include('tunes_app.urls', namespace='music')),
     url(r'^', include('core.urls', namespace='core')),
 ]
